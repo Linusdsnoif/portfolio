@@ -5,9 +5,7 @@ body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
-    ul li{
-      display: contents;
-   }
+    
 
     nav {
       display : flex;
@@ -16,7 +14,8 @@ body {
       border-bottom-style : solid;
       border-bottom-color : oklch(80% 3% 200);
     }
-    a {
+
+    a[name="nav"] {
       flex: 1;
       text-decoration: none;
       color: inherit;
@@ -41,46 +40,13 @@ body {
       padding-bottom : 10px;
     }
 
-    form {
-      display: grid; 
-      grid-template-columns: auto 1fr; 
-      gap: 1em;
-      max-width: 1000px; 
-      margin: 0
+    header {
+        text-align: center;
+        padding-bottom: 1px;
     }
 
-    label {
-      grid-column: 1; 
-    }
-
-    button {
-      grid-column: 2; 
-      width: 100%;
-      padding: 10px;
-      border: 1px solid oklch(80% 3% 200);
-      font-size: 16px;
-      box-sizing: border-box;
-    }
-    
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-      gap: 1em;
-    }
-
-    .projects article {
-      display: grid;
-      grid-template-rows: subgrid;
-      grid-row: span 3;
-      gap: 1em;
-
-    }
-
-    .projects h2 {
-      margin: 0
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      line-height: 1.1; 
+    li {
+        text-align: left;
+        padding-bottom: 5px;
     }
   }
