@@ -1,46 +1,58 @@
-body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-    max-width: 100ch;
-    margin-inline: max(1em, (100% - 100ch) / 2);
-    
+:root {
+    color-scheme: dark;
+  }
+  
+  body {
+      font: 100%/1.5 system-ui;
+      max-width: 100ch;
+      margin-inline: max(1em, (100% - 100ch) / 2);
+      
+      
 
-    nav {
-      display : flex;
-      margin-bottom: 10px;
-      border-bottom-width : 1px;
-      border-bottom-style : solid;
-      border-bottom-color : oklch(80% 3% 200);
-    }
 
-    a[name="nav"] {
-      flex: 1;
-      text-decoration: none;
-      color: inherit;
-      text-align: center;
-      padding: 4em;
-    }
-    
-    
-    a:hover {
-      border-bottom-width : 10px;
-      border-bottom-style : solid;
-      border-bottom-color: var(--color-accent);
-      accent-color : var(--color-accent);
-      padding-bottom : 10px;
-      background-color: oklch(from var(--color-accent) 95% 5% h)
-    }
-
-    a.current {
-      border-bottom-width : 10px;
-      border-bottom-style : solid;
-      border-bottom-color : oklch(80% 3% 200);
-      padding-bottom : 10px;
-    }
-
-    header {
+      a {
+        flex: 1;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        padding: 4em;
+      }
+      
+      nav {
+        display : flex;
+        margin-bottom: 10px;
+        border-bottom-width : 1px;
+        border-bottom-style : solid;
+        --border-color: oklch(80% 10% 200 / 80%);
+        border-bottom-color: var(--border-color);
+      }
+  
+      a[name="nav"] {
+        flex: 1;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        padding: 4em;
+      }
+      
+      
+      a:hover {
+        border-bottom-width : 10px;
+        border-bottom-style : solid;
+        border-bottom-color: var(--color-accent);
+        accent-color : var(--color-accent);
+        padding-bottom : 10px;
+        background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+      }
+  
+      a.current {
+        border-bottom-width : 10px;
+        border-bottom-style : solid;
+        border-bottom-color: var(--border-color);
+        padding-bottom : 10px;
+      }
+  
+      header {
         text-align: center;
         padding-bottom: 1px;
     }
@@ -49,4 +61,14 @@ body {
         text-align: left;
         padding-bottom: 5px;
     }
-  }
+  
+      label[class="color-scheme"] {
+        position: absolute; 
+        font-size: 80%;
+        top: 10px;
+        right: 10px; 
+        padding: 5px 10px;
+        border-radius: 1px;
+      }
+    }
+  
