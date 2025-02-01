@@ -5,6 +5,74 @@ function $$(selector, context = document) {
 }
 
 
+export async function fetchJSON(url) {
+  try {
+      //Fetch the JSON file from the given URL
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+
+      console.log(response)
+      const data = await response.json();
+
+      console.log(data);
+      return data; 
+
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+// window.fetchJSON = fetchJSON;
+
+// const containerElement = document.createElement('div');
+// window.containerElement = containerElement;
+// const project = {
+//   title: 'Lorem ipsum dolor sit.',
+//   description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, ut perspiciatis, ad illum quo possimus porro atque iure nisi molestiae libero nostrum, reprehenderit neque ex iusto. Magni corrupti inventore qui.',
+//   image: 'https://vis-society.github.io/labs/2/images/empty.svg',
+// };
+
+// window.project = project;
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+
+  containerElement.innerHTML = '';
+
+  if (!(containerElement instanceof HTMLElement) || !project || containerElement === null) {
+    console.error("Invalid container element!");
+    return;
+}
+
+
+  
+  const validHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    if (!validHeadingTags.includes(headingLevel)) {
+        console.error("Invalid heading level! Defaulting to h2.");
+        headingLevel = 'h2';
+    }
+
+    const article = document.createElement('article');
+
+    // Populate the article element with dynamic content
+    article.innerHTML += `
+    
+    <${headingLevel}>${project.title || 'No title'}<${headingLevel}>
+    <img src="${project.image || ''}" alt="">
+    <p>${project.description || 'No description.'}</p>
+    `;
+
+    containerElement.appendChild(article);
+}
+
+// window.renderProjects = renderProjects;
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
@@ -84,3 +152,4 @@ form?.addEventListener('submit', function (event) {
     
     location.href = url;
   });
+
