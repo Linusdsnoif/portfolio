@@ -5,7 +5,7 @@ const latestProjects = projects.slice(0, 3);
 const projectsContainer = document.querySelector('.projects');
 const profileStats = document.querySelector('#profile-stats');
 
-console.log("Latest Projects:", latestProjects);
+
 
 if (latestProjects && latestProjects.length > 0) {
     projectsContainer.innerHTML = '';
