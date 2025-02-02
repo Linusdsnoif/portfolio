@@ -25,7 +25,7 @@ export async function fetchJSON(url) {
   }
 }
 
-// window.fetchJSON = fetchJSON;
+window.fetchJSON = fetchJSON;
 
 // const containerElement = document.createElement('div');
 // window.containerElement = containerElement;
