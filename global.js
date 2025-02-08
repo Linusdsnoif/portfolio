@@ -51,7 +51,6 @@ window.projectsContainer = projectsContainer;
 window.renderProjects = renderProjects;
 
 
-  
   const validHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
     if (!validHeadingTags.includes(headingLevel)) {
         console.error("Invalid heading level! Defaulting to h2.");
@@ -66,6 +65,7 @@ window.renderProjects = renderProjects;
     <${headingLevel}>${project.title || 'No title'}<${headingLevel}>
     <img src="${project.image || ''}" alt="">
     <p>${project.description || 'No description.'}</p>
+    <p name = "year">Year : ${project.year || 'No description.'}</p>
     `;
 
     containerElement.appendChild(article);

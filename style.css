@@ -146,4 +146,76 @@ body {
       padding: 5px 10px;
       border-radius: 1px;
     }
+    .projects p[name="year"] {
+      font-size: 70%;
+      font-variant-numeric: oldstyle-nums;
+    }
+
+    #projects-pie-plot {
+      max-width: 20em;
+      margin-block: 2em;
+    
+      overflow: visible;
+    }
+
+    .legend {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+      gap: 1em;
+      padding: 1em;
+      border: 1px solid currentColor;
+      list-style: none;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: start;
+      gap: 1em;
+    }
+    
+    .swatch {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-color: var(--color);
+      border-radius: 50%;
+      align-items: center;
+    }
+    
+    .charts {
+      display: flex;
+      align-items: start;
+      gap: 2em;
+      margin: 2em 0;
+    }
+    
+    .searchBar {
+      display: block;
+      width: 100%;
+      max-width: 80em;
+      padding: 0.5em;
+      margin: 1em 0;
+      font: inherit;
+      border: 1px solid currentColor;
+      border-radius: 0.25em;
+    }
+    
+    &:has(path:hover) {
+      path:not(:hover) {
+        opacity: 0.5;
+      }
+    }
+
+    path {
+      transition: 300ms;
+    }
+
+    .selected {
+      --color: oklch(60% 45% 0) !important;
+    
+      &:is(path) {
+        fill: var(--color);
+      }
+    }
   }
