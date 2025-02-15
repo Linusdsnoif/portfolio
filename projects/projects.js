@@ -69,7 +69,7 @@ if (projects && projects.length > 0) {
                     projectsTitle.textContent = `${projects.length} Projects`;
 
                     // Show all projects
-                    // projectsContainer.innerHTML = '';
+                    projectsContainer.innerHTML = '';
                     projects.forEach(project => {
                         const article = document.createElement('article');
                         renderProjects(project, article, 'h2');
