@@ -1,33 +1,29 @@
-import {fetchJSON, renderProjects, fetchGitHubData } from './global.js';
+// import {fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
-const projects = await fetchJSON('./lib/projects.json');
-const latestProjects = projects.slice(0, 3);
-const projectsContainer = document.querySelector('.projects');
-const profileStats = document.querySelector('#profile-stats');
+// const projects = await fetchJSON('./lib/projects.json');
+// const projectsContainer = document.querySelector('.projects');
+// const profileStats = document.querySelector('#profile-stats');
 
-
-
-if (latestProjects && latestProjects.length > 0) {
-    projectsContainer.innerHTML = '';
+// // Render ALL projects instead of just the top 3
+// if (projects && projects.length > 0) {
+//     projectsContainer.innerHTML = '';
     
-    latestProjects.forEach(project => {
-        const article = document.createElement('article');
-        renderProjects(project, article, 'h2');
-        projectsContainer.appendChild(article);
-    });
-}
+//     projects.forEach(project => {
+//         const article = document.createElement('article');
+//         renderProjects(project, article, 'h2');
+//         projectsContainer.appendChild(article);
+//     });
+// }
 
-const githubData = await fetchGitHubData('Linusdsnoif');
+// const githubData = await fetchGitHubData('Linusdsnoif');
 
-if (profileStats) {
-    profileStats.innerHTML = `
-          <dl>
-            <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
-            <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
-            <dt>Followers:</dt><dd>${githubData.followers}</dd>
-            <dt>Following:</dt><dd>${githubData.following}</dd>
-          </dl>
-      `;
-  }
-
-  
+// if (profileStats) {
+//     profileStats.innerHTML = `
+//           <dl>
+//             <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
+//             <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
+//             <dt>Followers:</dt><dd>${githubData.followers}</dd>
+//             <dt>Following:</dt><dd>${githubData.following}</dd>
+//           </dl>
+//       `;
+// }

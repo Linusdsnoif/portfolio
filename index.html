@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" class="home" id = "root">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linus Lee: Personal site and portfolio</title>
+    <title>Academic Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="--color-accent: oklch(65% 50% 0)">
+<body>
 
-    <h1>Linus Lee</h1>
-    <p>
-        Hello, my name is Linus. I am a second year data science student at ucsd.
-        This is my first lab in dsc106 and very excited for the course. 
-        In my free time, I love playing basketball and learn some coding as well.
-    </p>
-    <img src="images/dog.jpeg" alt="This is a cute dog and it is staring at you">
+    <main class="content">
+        <header>
+            <h1>Linus Lee</h1>
+        </header>
 
-    <h2>Github Stats</h2>
-    <div id="profile-stats"></div>
+        <section class="profile-section">
+            <div class="profile-image">
+                <img src="images/me.HEIC" alt="Profile Picture">
+            </div>
 
-    <h2>Latest Projects</h2>
-    <div class="projects"></div>
+            <div class="profile-details">
+                <h2>Contact</h2>
+                <p>University of California, San Diego<br>
+                E-mail: Li20040705@gmail.com<br>
+                <a href="https://github.com/Linusdsnoif">GitHub</a></p>
 
-    <script src="global.js" type="module"></script>
-    <script src="index.js" type="module" defer></script>
+                <h2>Research Interest</h2>
+                <p>My research interests focus on advancing the field of trustworthy data analysis by fostering responsible data management practices. I am deeply passionate about data management, as I believe that having reliable, accessible, and well-organized data is crucial for establishing trust in data-driven decision-making...</p>
+                <p>See <a href="#">details</a>.</p>
+            </div>
+        </section>
+
+        <section class="callout-text">
+            <p>I am actively seeking Ph.D. students interested in Data Management, particularly in areas such as Data Management for Machine Learning, Responsible Data Science, Data Cleaning and Debiasing, Data Integration, and Data-centric AI...</p>
+        </section>
+    </main>
 
 </body>
 </html>
