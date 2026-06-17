@@ -1,2 +1,3 @@
-# portfolio
+# Portfolio
+Portfolio for Linus Lee
  
