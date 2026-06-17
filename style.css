@@ -108,3 +108,21 @@ header .title {
 .profile-details a:hover .fa-github {
   color: #4A708B; /* Changes to your academic blue on hover */
 }
+
+.resume-text-link {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #4A708B; /* Matches your header blue */
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none; /* Removes the default blue underline */
+  border-bottom: 1px solid transparent; /* Invisible border for a smooth hover effect */
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+/* Hover effect: slightly darker color and a crisp underline */
+.resume-text-link:hover {
+  color: #365267;
+  border-bottom: 1px solid #365267; 
+}
