@@ -26,6 +26,7 @@ header h1 {
   margin: 0 0 5px 0;
 }
 
+
 header .title {
   font-weight: bold;
   margin: 0;
@@ -55,13 +56,21 @@ header .title {
   font-size: 1.5rem;
 }
 
+.profile-intro h3 {
+  color: #4A708B;
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+}
+
 .profile-details p {
   line-height: 1.5;
 }
 
 /* Bottom Callout Text */
 .callout-text {
-  color: #b30000; /* Red text */
+  color: #000000; /* Red text */
 }
 
 /* Simple Responsive Design for smaller screens */
@@ -69,4 +78,33 @@ header .title {
   .profile-section {
       flex-direction: column; /* Stacks the image on top of the text on mobile */
   }
+}
+
+/* Layout for the icons */
+.sprofile-details {
+  display: flex;
+  gap: 20px; /* Space between the icons */
+  margin-top: 15px;
+}
+
+/* Base style for the icons */
+.profile-details a {
+  color: #333; /* Dark gray, easily readable */
+  font-size: 2rem; /* Makes the icons larger (adjust as needed) */
+  text-decoration: none; /* Removes any default underlines */
+  transition: transform 0.2s ease, color 0.2s ease; /* Smooth animation */
+}
+
+/* Hover effects */
+.profile-details a:hover {
+  transform: translateY(-3px); /* Makes the icon "jump" up slightly when hovered */
+}
+
+/* Specific color changes on hover (Optional but fun!) */
+.profile-details a:hover .fa-envelope {
+  color: #EA4335; /* Changes to Google Red on hover */
+}
+
+.profile-details a:hover .fa-github {
+  color: #4A708B; /* Changes to your academic blue on hover */
 }
